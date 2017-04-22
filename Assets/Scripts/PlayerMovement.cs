@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour {
             LastJumpHand = null;
         }
         for (int i = 0; i < Hands.Length; i++) {
-            if (Hands[i].CurrentHandState != HandState.Idle) {
+            if (Hands[i].CurrentHandState == HandState.Uninitialized) {
                 continue;
             }
 

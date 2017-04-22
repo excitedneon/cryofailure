@@ -5,19 +5,17 @@ using NewtonVR;
 
 public class Computer : MonoBehaviour {
     public TextFace TextFace;
-    public int LinesPerScreen;
+    public ComputerProgram StartupProgram;
     public NVRButton BtnUp;
     public NVRButton BtnDown;
     public NVRButton BtnLeft;
     public NVRButton BtnRight;
     public NVRButton BtnOk;
     public NVRButton BtnCancel;
-    public ComputerProgram StartupProgram;
 
     private Stack<ComputerProgram> ProgramStack = new Stack<ComputerProgram>();
     private Queue<string> Buffer = new Queue<string>();
     private string CurrentUnFlushedLine = "";
-    private string LastBuffer = "";
 
     void Start() {
         ProgramStack.Push(StartupProgram);
@@ -50,7 +48,6 @@ public class Computer : MonoBehaviour {
         while (Buffer.Count > 0) {
             result += Buffer.Dequeue() + "\n";
         }
-        LastBuffer = result;
         return result;
     }
 }

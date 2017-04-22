@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenableDoor : Activatable {
     public Transform DoorRoot;
     public bool Open;
+    public bool Locked = false;
 
     void Update() {
         float TargetScale = 1;
@@ -19,6 +20,8 @@ public class OpenableDoor : Activatable {
     }
 
     public override void Activate() {
-        Open = !Open;
+        if (!Locked) {
+            Open = !Open;
+        }
     }
 }
