@@ -4,6 +4,7 @@ using UnityEngine;
 using NewtonVR;
 
 public class Computer : MonoBehaviour {
+    public AudioClip Boop;
     public TextFace TextFace;
     public ComputerProgram StartupProgram;
     public NVRButton BtnUp;
@@ -14,12 +15,23 @@ public class Computer : MonoBehaviour {
     public NVRButton BtnCancel;
     public int FontSize = 28;
 
+    private RandomSoundMaker Beeper;
     private Stack<ComputerProgram> ProgramStack = new Stack<ComputerProgram>();
     private Queue<string> Buffer = new Queue<string>();
     private string CurrentUnFlushedLine = "";
+    private string LastText = "";
 
     void Start() {
         ProgramStack.Push(StartupProgram);
+        AudioSource Source = gameObject.AddComponent<AudioSource>();
+        Source.playOnAwake = false;
+        Source.spatialBlend = 1.0f;
+        Source.minDistance = 0.1f;
+        Source.maxDistance = 1.2f;
+        Beeper = gameObject.AddComponent<RandomSoundMaker>();
+        Beeper.Source = Source;
+        Beeper.Clips = new AudioClip[]{ Boop };
+        Beeper.PitchRandomizationAmount = 0.15f;
     }
 
     void Update() {
@@ -29,7 +41,12 @@ public class Computer : MonoBehaviour {
             ProgramStack.Pop();
         }
         TextFace.FontSize = FontSize;
-        TextFace.Text = Render();
+        string Text = Render();
+        if (!Text.Equals(LastText)) {
+            Beeper.PlaySound();
+            LastText = Text;
+        }
+        TextFace.Text = Text;
     }
 
     public void StartProgram(ComputerProgram program) {

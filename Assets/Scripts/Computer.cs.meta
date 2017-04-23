@@ -1,10 +1,19 @@
 fileFormatVersion: 2
 guid: a1b90ed572f117a4faad38c72129b2f4
-timeCreated: 1492852805
+timeCreated: 1492973500
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Boop: {fileID: 8300000, guid: 22e1124b91951ae4db0eac5a8237ddc8, type: 3}
+  - TextFace: {instanceID: 0}
+  - StartupProgram: {instanceID: 0}
+  - BtnUp: {instanceID: 0}
+  - BtnDown: {instanceID: 0}
+  - BtnLeft: {instanceID: 0}
+  - BtnRight: {instanceID: 0}
+  - BtnOk: {instanceID: 0}
+  - BtnCancel: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

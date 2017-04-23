@@ -6,6 +6,7 @@ using NewtonVR;
 public class RandomSoundMaker : MonoBehaviour {
     public AudioSource Source;
     public AudioClip[] Clips;
+    public float PitchRandomizationAmount = 0f;
 
     private NVRButton Button;
 
@@ -20,6 +21,7 @@ public class RandomSoundMaker : MonoBehaviour {
     }
 
     public void PlaySound() {
+        Source.pitch = 1f + Random.Range(-PitchRandomizationAmount, PitchRandomizationAmount);
         Source.PlayOneShot(Clips[Random.Range(0, Clips.Length)]);
     }
 }
