@@ -6,10 +6,18 @@ using NewtonVR;
 public class ActButton : MonoBehaviour {
     public NVRButton Activator;
     public Activatable Activatable;
-    
+
     void Update () {
-		if (Activator.ButtonDown) {
+		if (Activatable != null && Activator != null && Activator.ButtonDown) {
             Activatable.Activate();
         }
 	}
+
+    public void Press() {
+        Debug.Log("Pressed!");
+        if (Activatable != null) {
+            Debug.Log("Activated!");
+            Activatable.Activate();
+        }
+    }
 }

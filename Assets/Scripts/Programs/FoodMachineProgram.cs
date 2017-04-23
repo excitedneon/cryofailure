@@ -5,25 +5,43 @@ using UnityEngine;
 public class FoodMachineProgram : ComputerProgram {
     public Attacher Attacher;
     public float FillSpeed = 1f;
-    public float Amount = 10f;
+    public float Contained = 10f;
+    public ResourceType ContainedType;
 
     public override bool UpdateProgram(Computer host) {
         // Fill attached stuff if possible
         FoodContainer FoodContainer;
-        if (Attacher.AttachedGameObject != null && (FoodContainer = Attacher.AttachedGameObject.GetComponent<FoodContainer>()) != null) {
-            if (FoodContainer.Capacity - FoodContainer.Contained > 0) {
-                float FillAmt = Time.deltaTime * FillSpeed;
-                if (FoodContainer.Contained + FillAmt > FoodContainer.Capacity) {
-                    FillAmt = FoodContainer.Capacity - FoodContainer.Contained;
-                }
-                FoodContainer.Contained += FillAmt;
-                Amount -= FillAmt;
+        if (Attacher.AttachedGameObject != null && 
+            (FoodContainer = Attacher.AttachedGameObject.GetComponent<FoodContainer>()) != null &&
+            (FoodContainer.ContainedType == ResourceType.Nothing || FoodContainer.ContainedType == ContainedType) &&
+            FoodContainer.Capacity - FoodContainer.Contained > 0 &&
+            Contained > 0) {
+            float FillAmt = Time.deltaTime * FillSpeed;
+            if (FillAmt > Contained) {
+                FillAmt = Contained;
             }
+            if (FillAmt > 0) {
+                FoodContainer.ContainedType = ContainedType;
+            }
+            if (FoodContainer.Contained + FillAmt > FoodContainer.Capacity) {
+                FillAmt = FoodContainer.Capacity - FoodContainer.Contained;
+            }
+            FoodContainer.Contained += FillAmt;
+            Contained -= FillAmt;
         }
 
-        host.Println("Food Dispenser");
+
+        if (ContainedType == ResourceType.Food) host.Print("Food");
+        if (ContainedType == ResourceType.Water) host.Print("Water");
+        host.Println(" Dispenser");
         host.Println("");
-        host.Println("Food left: " + Mathf.Round(Amount * 10f) / 10f + " litres");
+        if (ContainedType == ResourceType.Food) host.Print("Food");
+        if (ContainedType == ResourceType.Water) host.Print("Water");
+        host.Println(" left: " + ContainedAmountFormatted() + " liters");
         return true;
+    }
+
+    public string ContainedAmountFormatted() {
+        return "" + Mathf.Round(Contained * 10f) / 10f;
     }
 }

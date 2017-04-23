@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterMachineProgram : ComputerProgram {
+public class HelloWorldProgram : ComputerProgram {
     public override bool UpdateProgram(Computer host) {
-        host.Println("Water Dispenser");
-        host.Println("");
-        host.Println("Water left: 0 litres");
+        host.Println("Hello, world!");
         return true;
     }
 }

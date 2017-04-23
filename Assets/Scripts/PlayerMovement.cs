@@ -26,7 +26,8 @@ public class PlayerMovement : MonoBehaviour {
             RaycastHit Hit;
             Physics.Raycast(HandRay, out Hit);
             if (Hands[i].Inputs[NVRButtons.Touchpad].IsTouched && Hit.collider != null && 
-                    (Hit.point - Hands[i].transform.position).magnitude < TeleportRange) {
+                    (Hit.point - Hands[i].transform.position).magnitude < TeleportRange &&
+                    Hit.normal.y == 1) {
                 UpdateMovementIndicator(i, Hit);
                 if (LastJumpHand != Hands[i] && Hands[i].Inputs[NVRButtons.Touchpad].IsPressed) {
                     Move(Hit);
@@ -48,11 +49,9 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void Move(RaycastHit hit) {
-        if (hit.collider != null && hit.normal.y == 1) {
-            Vector3 NewPos = transform.position;
-            NewPos += hit.point - Head.position;
-            NewPos.y = transform.position.y;
-            transform.position = NewPos;
-        }
+        Vector3 NewPos = transform.position;
+        NewPos += hit.point - Head.position;
+        NewPos.y = transform.position.y;
+        transform.position = NewPos;
     }
 }

@@ -24,7 +24,7 @@ public class BedroomStartupProgram : ComputerProgram {
                     Selected = 0;
                 }
             }
-            host.Println("Poem of the Day");
+            host.Println("MOTD");
         }
         if (Selection == 1) {
             host.Print("> ");
@@ -48,7 +48,13 @@ public class BedroomStartupProgram : ComputerProgram {
         host.Println("Help");
         host.Println("");
         if (Selected == 0) {
-            host.Println("A cool poem.");
+            host.Println("The rocket will free man from his");
+            host.Println("remaining chains, the chains of");
+            host.Println("gravity which still tie him to");
+            host.Println("this planet. It will open to him");
+            host.Println("the gates of heaven.");
+            host.Println("");
+            host.Println("               - Wemher von Braun");
         } else if (Selected == 1) {
             if (BedroomDoor.Locked) {
                 host.Print("Locking door...");
@@ -61,12 +67,15 @@ public class BedroomStartupProgram : ComputerProgram {
             host.Println("");
         } else if (Selected == 2) {
             host.Println("Good morning, commander!");
-            host.Println("I regret to inform you that the ship is 30 light");
-            host.Println("years from your destination. This is");
-            host.Println("unfortunate, as cryosleep was planned to end");
-            host.Println("upon arrival. Re-entering cryosleep is not an");
-            host.Println("option, as this vessel does not have the");
-            host.Println("required equipment.");
+            host.Println("");
+            host.Println("I regret to inform you that the");
+            host.Println("ship is 30 lightyears from your");
+            host.Println("destination. This is unfortunate,");
+            host.Println("as cryosleep was planned to end");
+            host.Println("upon arrival. Re-entering");
+            host.Println("cryosleep is not an option, as");
+            host.Println("this vessel does not have the");
+            host.Println("required equipment to do so.");
             host.Println("");
             host.Println("Welcome to RVS Progress.");
             host.Println("Enjoy your stay.");

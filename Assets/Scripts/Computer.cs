@@ -12,6 +12,7 @@ public class Computer : MonoBehaviour {
     public NVRButton BtnRight;
     public NVRButton BtnOk;
     public NVRButton BtnCancel;
+    public int FontSize = 28;
 
     private Stack<ComputerProgram> ProgramStack = new Stack<ComputerProgram>();
     private Queue<string> Buffer = new Queue<string>();
@@ -27,6 +28,7 @@ public class Computer : MonoBehaviour {
         if (!ProgramStack.Peek().UpdateProgram(this)) {
             ProgramStack.Pop();
         }
+        TextFace.FontSize = FontSize;
         TextFace.Text = Render();
     }
 

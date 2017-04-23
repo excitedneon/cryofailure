@@ -5,6 +5,7 @@ using UnityEngine;
 public class TextFace : MonoBehaviour {
     public MeshRenderer Renderer;
     public int MaterialIndex;
+    public int FontSize = 16;
     public string Text {
         get {
             return text;
@@ -12,7 +13,7 @@ public class TextFace : MonoBehaviour {
         set {
             if (text != value) {
                 text = value;
-                Texture2D NewTexture = TextGenerator.GetTextTexture(text);
+                Texture2D NewTexture = TextGenerator.GetTextTexture(text, FontSize);
                 if (NewTexture != null) {
                     Renderer.materials[MaterialIndex].SetTexture("_EmissionMap", NewTexture);
                 }

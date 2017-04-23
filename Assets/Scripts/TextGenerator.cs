@@ -13,8 +13,9 @@ public class TextGenerator : MonoBehaviour {
         Generator = this;
     }
 
-    private Texture2D GenerateText(string text) {
+    private Texture2D GenerateText(string text, int fontSize) {
         TextMesh.text = text;
+        TextMesh.fontSize = fontSize;
         GenerationCamera.Render();
 
         Texture2D Result = new Texture2D(512, 512, TextureFormat.RGB24, false);
@@ -26,12 +27,12 @@ public class TextGenerator : MonoBehaviour {
         return Result;
     }
 
-    public static Texture2D GetTextTexture(string text) {
+    public static Texture2D GetTextTexture(string text, int fontSize = 28) {
         if (Generator == null) {
             return null;
         }
         if (!GeneratedTextures.ContainsKey(text)) {
-            GeneratedTextures[text] = Generator.GenerateText(text);
+            GeneratedTextures[text] = Generator.GenerateText(text, fontSize);
         }
         return (Texture2D)GeneratedTextures[text]; 
     }

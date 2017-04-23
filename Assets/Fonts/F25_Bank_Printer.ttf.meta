@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: ee99d555d86a2a947abecd230a44861a
-timeCreated: 1492849483
+guid: e2d77b2a2acb747409a6573d718e4e92
+timeCreated: 1492965484
 licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 4
@@ -9,9 +9,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: RuneScape UF
+  fontName: F25 Bank Printer
   fontNames:
-  - RuneScape UF
+  - F25 Bank Printer
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

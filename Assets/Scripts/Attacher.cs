@@ -5,6 +5,7 @@ using UnityEngine;
 public class Attacher : MonoBehaviour {
     public GameObject AttachedGameObject;
     public Vector3 DetachOffset;
+    public ResourceType AttachedResources;
 
     void Update() {
         if (AttachedGameObject == null) {
@@ -25,7 +26,10 @@ public class Attacher : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         Transform parent = other.transform.parent;
-        if (parent != null && parent.GetComponent<Attachable>() != null && parent.GetComponent<Attachable>().Attach) {
+        FoodContainer Food;
+        if (parent != null && (Food = parent.GetComponent<FoodContainer>()) != null && 
+            (Food.ContainedType == ResourceType.Nothing || Food.ContainedType == AttachedResources) &&
+            parent.GetComponent<Attachable>() != null && parent.GetComponent<Attachable>().Attach) {
             AttachedGameObject = parent.gameObject;
         }
     }
