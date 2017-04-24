@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 33091395894234690}
   - component: {fileID: 135456922447202752}
   - component: {fileID: 23534903392931124}
+  - component: {fileID: 54033319819918444}
   m_Layer: 0
   m_Name: Pill
   m_TagString: Untagged
@@ -76,6 +77,7 @@ GameObject:
   - component: {fileID: 33529416041919382}
   - component: {fileID: 135531755101304078}
   - component: {fileID: 23042075457758946}
+  - component: {fileID: 54835182838701276}
   m_Layer: 0
   m_Name: Pill
   m_TagString: Untagged
@@ -94,6 +96,7 @@ GameObject:
   - component: {fileID: 33189364871894368}
   - component: {fileID: 135171108845913790}
   - component: {fileID: 23992541655841988}
+  - component: {fileID: 54798238067792838}
   m_Layer: 0
   m_Name: Pill
   m_TagString: Untagged
@@ -148,6 +151,7 @@ GameObject:
   - component: {fileID: 33672436300384302}
   - component: {fileID: 135197269948434328}
   - component: {fileID: 23353974983190020}
+  - component: {fileID: 54966966441583154}
   m_Layer: 0
   m_Name: Pill
   m_TagString: Untagged
@@ -206,6 +210,7 @@ GameObject:
   - component: {fileID: 33236972572469772}
   - component: {fileID: 135401816699541298}
   - component: {fileID: 23307692912150740}
+  - component: {fileID: 54772705227858230}
   m_Layer: 0
   m_Name: Pill
   m_TagString: Untagged
@@ -224,6 +229,7 @@ GameObject:
   - component: {fileID: 33206481184457134}
   - component: {fileID: 135141231540023124}
   - component: {fileID: 23021324176982328}
+  - component: {fileID: 54874465667819938}
   m_Layer: 0
   m_Name: Pill
   m_TagString: Untagged
@@ -260,6 +266,7 @@ GameObject:
   - component: {fileID: 33733255419439516}
   - component: {fileID: 135515294681906100}
   - component: {fileID: 23590209525994148}
+  - component: {fileID: 54411649810090390}
   m_Layer: 0
   m_Name: Pill
   m_TagString: Untagged
@@ -417,7 +424,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1582366983562386}
   m_LocalRotation: {x: -0, y: -0, z: 0.7064827, w: 0.70773035}
-  m_LocalPosition: {x: 0.148, y: 0.0388, z: 0.04300022}
+  m_LocalPosition: {x: 0.16560006, y: 0.0388, z: -0.09200001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4582470550052790}
@@ -969,6 +976,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1447714759690342}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54033319819918444
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1072868427047856}
+  serializedVersion: 2
+  m_Mass: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!54 &54398866056925542
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -984,6 +1006,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!54 &54411649810090390
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1994968208132314}
+  serializedVersion: 2
+  m_Mass: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!54 &54739665089904106
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -992,6 +1029,81 @@ Rigidbody:
   m_GameObject: {fileID: 1567810252095006}
   serializedVersion: 2
   m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54772705227858230
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728644903639556}
+  serializedVersion: 2
+  m_Mass: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54798238067792838
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424688753654614}
+  serializedVersion: 2
+  m_Mass: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54835182838701276
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1237231766028206}
+  serializedVersion: 2
+  m_Mass: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54874465667819938
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1825511486881670}
+  serializedVersion: 2
+  m_Mass: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54966966441583154
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565069242107900}
+  serializedVersion: 2
+  m_Mass: 0.05
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -1170,7 +1282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5acc68a2ecf98824ba3f8fa739c53028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Material: 6
+  Material: 0
 --- !u!114 &114921608310361336
 MonoBehaviour:
   m_ObjectHideFlags: 1

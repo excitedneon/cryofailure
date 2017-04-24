@@ -334,7 +334,7 @@ MonoBehaviour:
   Fillable: {fileID: 4266179285543460}
   Renderer: {fileID: 23825473261149828}
   EmptyScale: {x: 0.225, y: 0.05, z: 0.2}
-  FullScale: {x: 0.225, y: 0.2, z: 0.2}
+  FullScale: {x: 0.225, y: 0.125, z: 0.2}
   Capacity: 1
   Contained: 0
   Heat: 0

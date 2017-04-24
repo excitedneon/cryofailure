@@ -46,32 +46,37 @@ public class FoodInformationProgram : ComputerProgram {
         host.Println("Status");
         host.Println("");
         if (Selected == 0) {
-            host.Println("Welcome to the infirmary, here you can find");
-            host.Println("supplies you might require to live.");
+            host.Println("Welcome to the infirmary, here");
+            host.Println("you can find food and medical");
+            host.Println("supplies.");
             host.Println("");
             host.Println("Feel free to ask questions!");
         } else if (Selected == 1) {
-            host.Println("You can pick up one of the containers stored on");
-            host.Println("the rack to the right. Those can be filled at");
-            host.Println("the Nutritional Resource Dispensers behind you.");
+            host.Println("You can pick up one of the");
+            host.Println("containers stored on the rack to");
+            host.Println("the right. Those can be filled at ");
+            host.Println("the Nutritional Resource");
+            host.Println("Dispensers behind you.");
             host.Println("");
             host.Println("Enjoy your meal!");
         } else if (Selected == 2) {
-            host.Println("Medical supplies are in the locker to the left.");
+            host.Println("Medical supplies are in the locker");
+            host.Println("to the left.");
             host.Println("");
             host.Println("Stay healthy!");
         } else if (Selected == 3) {
             host.Println("Current status:");
-            host.Println("- Food left in storage: " + FoodMachine.ContainedAmountFormatted() + " liters.");
-            host.Println("- Water left in storage: " + WaterMachine.ContainedAmountFormatted() + " liters.");
+            host.Println("- Food left in storage: " + FoodMachine.ContainedAmountFormatted() + " liters");
+            host.Println("- Water left in storage: " + WaterMachine.ContainedAmountFormatted() + " liters");
             int FoodDays = (int) (FoodMachine.Contained * 2);
             int WaterDays = (int) (WaterMachine.Contained * 0.75f);
-            host.Println("- Estimated days until all is lost: " + (FoodDays < WaterDays ? WaterDays : FoodDays) + ".");
-            host.Print("- Expected cause of death: ");
+            host.Println("- Estimated days until the end: ");
+            host.Println("    " + (FoodDays < WaterDays ? WaterDays : FoodDays));
+            host.Println("- Expected cause of death:");
             if (FoodDays < WaterDays) {
-                host.Println(" starvation.");
+                host.Println("    Starvation");
             } else {
-                host.Println(" dehydration.");
+                host.Println("    Dehydration");
             }
         }
         return true;

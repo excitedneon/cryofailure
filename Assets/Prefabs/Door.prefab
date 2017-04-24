@@ -1328,6 +1328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa56e1808886489458daa2b1cebb3251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DoorOpen: {fileID: 8300000, guid: 291b354c04cf5744481d2337357001ef, type: 3}
+  DoorLocked: {fileID: 8300000, guid: 0809a4c38a9735c4d903c7a1e45fa89b, type: 3}
   DoorRoot: {fileID: 4544250929477538}
   Open: 0
   Locked: 0
@@ -1350,6 +1352,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1e3b3fb79b303df419fb886a8d82e74a, type: 3}
   - {fileID: 8300000, guid: 2bb11651097a1b849830d5575ac116bf, type: 3}
   - {fileID: 8300000, guid: 62af7fb82de78854bbfa14ef68a7b98d, type: 3}
+  PitchRandomizationAmount: 0
 --- !u!114 &114519203933710000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1382,6 +1385,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1e3b3fb79b303df419fb886a8d82e74a, type: 3}
   - {fileID: 8300000, guid: 2bb11651097a1b849830d5575ac116bf, type: 3}
   - {fileID: 8300000, guid: 62af7fb82de78854bbfa14ef68a7b98d, type: 3}
+  PitchRandomizationAmount: 0
 --- !u!114 &114583126076097234
 MonoBehaviour:
   m_ObjectHideFlags: 1
